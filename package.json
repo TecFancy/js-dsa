@@ -22,7 +22,7 @@
     }
   },
   "lint-staged": {
-    "*.{ts}": "prettier --write"
+    "*.{ts}": "prettier --write ."
   },
   "devDependencies": {
     "@babel/cli": "^7.13.10",
