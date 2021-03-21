@@ -1,0 +1,44 @@
+{
+  "name": "js-dsa",
+  "version": "1.0.0",
+  "description": "JavaScript Data Structure and Algorithm",
+  "keywords": [
+    "JavaScript",
+    "Data Structure",
+    "Algorithm"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "ruofei",
+    "email": "rf.wangchn@foxmail.com"
+  },
+  "scripts": {
+    "test": "jest",
+    "ncu": "ncu"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts}": "prettier --write"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.10",
+    "@babel/core": "^7.13.10",
+    "@babel/preset-env": "^7.13.10",
+    "@babel/preset-typescript": "^7.13.0",
+    "@types/jest": "^26.0.21",
+    "@typescript-eslint/eslint-plugin": "^4.18.0",
+    "eslint": "^7.22.0",
+    "eslint-config-prettier": "^8.1.0",
+    "husky": "=4",
+    "jest": "^26.6.3",
+    "lint-staged": ">=10",
+    "npm-check-updates": "^11.3.0",
+    "prettier": "^2.2.1",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.3"
+  }
+}
