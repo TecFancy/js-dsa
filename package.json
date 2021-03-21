@@ -13,7 +13,7 @@
     "email": "rf.wangchn@foxmail.com"
   },
   "scripts": {
-    "test": "jest",
+    "test": "jest --watch",
     "ncu": "ncu"
   },
   "devDependencies": {
