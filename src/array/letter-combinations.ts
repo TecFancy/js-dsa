@@ -1,6 +1,6 @@
 /**
  * 电话号码的字母组合
- * @copyright https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number/
+ * @see https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number/
  */
 
 export const letterCombinations = (input: string): string[] => {
