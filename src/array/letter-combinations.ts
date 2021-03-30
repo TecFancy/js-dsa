@@ -3,7 +3,7 @@
  * @see https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number/
  */
 
-export const letterCombinations = (input: string): string[] => {
+export const letterCombinations1 = (input: string): string[] => {
   let result: string[] = [];
 
   if (!input || typeof input !== 'string') return result;
@@ -57,4 +57,36 @@ export const letterCombinations = (input: string): string[] => {
   };
 
   return comb(code) as string[];
+};
+
+export const letterCombinations2 = (input: string): string[] => {
+  const len: number = input.length;
+  if (!len) return [];
+
+  const queue: string[] = [''];
+  const map: string[] = [
+    '',
+    '',
+    'abc',
+    'def',
+    'ghi',
+    'jkl',
+    'mno',
+    'pqrs',
+    'tuv',
+    'wxyz',
+  ];
+
+  for (let index = 0; index < len; index++) {
+    const length: number = queue.length;
+    const mappedValue: string = map[parseInt(input[index], 10)]; // e.g. 'abc' or 'def' or ...
+    for (let i = 0; i < length; i++) {
+      const cur = queue.shift();
+      for (const c of mappedValue) {
+        queue.push(cur + c);
+      }
+    }
+  }
+
+  return queue;
 };
